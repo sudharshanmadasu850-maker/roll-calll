@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in | Rollcall</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark site-nav">
+<div class="container">
+<a class="navbar-brand" href="index.html">Rollcall</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="menu"><ul class="navbar-nav ms-auto align-items-md-center"><li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li><li class="nav-item"><a class="nav-link" href="students.html">Students</a></li><li class="nav-item"><a class="nav-link" href="attendance.html">Mark attendance</a></li><li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Add</a><ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="add-student.html">Add student</a></li><li><a class="dropdown-item" href="add-attendance.html">Add attendance</a></li><li><a class="dropdown-item" href="add-report.html">Add report</a></li></ul></li><li class="nav-item"><a class="nav-link active" href="login.html">Log in</a></li><li class="nav-item ms-md-2"><a class="btn btn-sm btn-light" href="signup.html">Create account</a></li></ul></div>
+</div>
+</nav>
+<main class="container py-4 py-md-5">
+<div class="row justify-content-center"><div class="col-md-8 col-lg-6 col-xl-5">
+<div class="auth-card"><h1 class="h2">Log in to Rollcall</h1><p class="text-muted mb-4">Pick up where you left off.</p>
+<form class="needs-validation" novalidate><div class="mb-3"><label class="form-label" for="email">Email</label><input type="email" class="form-control" id="email" required autocomplete="email"><div class="invalid-feedback">Enter a valid email address.</div></div><div class="mb-3"><label class="form-label" for="password">Password</label>
+<div class="input-group"><input type="password" class="form-control" id="password" required minlength="8" autocomplete="current-password"><button class="btn btn-outline-ink toggle-pw" type="button" data-target="password" aria-pressed="false">Show</button>
+<div class="invalid-feedback">Enter your password.</div></div></div><div class="d-flex justify-content-between align-items-center mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" id="remember"><label class="form-check-label small" for="remember">Keep me logged in</label></div><a class="small" href="#">Forgot password?</a></div>
+<button class="btn btn-ink w-100" type="submit">Log in</button></form>
+<p class="mt-4 mb-0 small">New here? <a href="signup.html">Create an account</a></p></div></div></div><script>
+document.querySelectorAll('.toggle-pw').forEach(function(b){b.addEventListener('click',function(){var i=document.getElementById(b.dataset.target);var show=i.type==='password';i.type=show?'text':'password';b.textContent=show?'Hide':'Show';b.setAttribute('aria-pressed',show);});});
+var f=document.querySelector('.needs-validation');
+f.addEventListener('submit',function(e){e.preventDefault();var pw=document.getElementById('password'),c=document.getElementById('confirm');if(c){c.setCustomValidity(c.value===pw.value?'':'Passwords do not match');}
+if(!f.checkValidity()){e.stopPropagation();f.classList.add('was-validated');return;}window.location.href='index.html';});
+</script>
+</main>
+<footer class="site-footer">
+<div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+<span>Rollcall attendance tracker. Static demo built with HTML, CSS and Bootstrap.</span>
+<span><a href="index.html">Dashboard</a> &nbsp; <a href="students.html">Students</a> &nbsp; <a href="attendance.html">Mark attendance</a> &nbsp; <a href="reports.html">Reports</a> &nbsp; <a href="login.html">Log in</a> &nbsp; <a href="signup.html">Create account</a></span>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mark attendance | Rollcall</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark site-nav">
+<div class="container">
+<a class="navbar-brand" href="index.html">Rollcall</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="menu"><ul class="navbar-nav ms-auto align-items-md-center"><li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li><li class="nav-item"><a class="nav-link" href="students.html">Students</a></li><li class="nav-item"><a class="nav-link active" href="attendance.html">Mark attendance</a></li><li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Add</a><ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="add-student.html">Add student</a></li><li><a class="dropdown-item" href="add-attendance.html">Add attendance</a></li><li><a class="dropdown-item" href="add-report.html">Add report</a></li></ul></li><li class="nav-item"><a class="nav-link" href="login.html">Log in</a></li><li class="nav-item ms-md-2"><a class="btn btn-sm btn-light" href="signup.html">Create account</a></li></ul></div>
+</div>
+</nav>
+<main class="container py-4 py-md-5">
+
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3"><h1 class="h2 mb-0">Mark attendance</h1><a class="btn btn-outline-ink" href="add-attendance.html">Add attendance record</a></div>
+<form onsubmit="return false">
+<div class="row g-2 mb-4">
+<div class="col-md-4"><label class="form-label" for="d">Date</label><input type="date" id="d" class="form-control" value="2026-10-29"></div>
+<div class="col-md-4"><label class="form-label" for="c">Class</label><select id="c" class="form-select"><option>CS-101</option><option>CS-102</option><option>CS-103</option></select></div>
+<div class="col-md-4"><label class="form-label" for="p">Period</label><select id="p" class="form-select"><option>Period 1</option><option>Period 2</option><option>Period 3</option></select></div>
+</div>
+<ul class="list-unstyled card-lite mb-3"><li class="mark-row"><span><span class="avatar">AR</span>Aarav Reddy</span><span class="btn-group" role="group" aria-label="Status for Aarav Reddy"><input type="radio" class="btn-check" name="s0" id="s0p" checked><label class="btn btn-sm opt-p" for="s0p">Present</label><input type="radio" class="btn-check" name="s0" id="s0l" ><label class="btn btn-sm opt-l" for="s0l">Late</label><input type="radio" class="btn-check" name="s0" id="s0a" ><label class="btn btn-sm opt-a" for="s0a">Absent</label></span></li><li class="mark-row"><span><span class="avatar">DS</span>Divya Sharma</span><span class="btn-group" role="group" aria-label="Status for Divya Sharma"><input type="radio" class="btn-check" name="s1" id="s1p" checked><label class="btn btn-sm opt-p" for="s1p">Present</label><input type="radio" class="btn-check" name="s1" id="s1l" ><label class="btn btn-sm opt-l" for="s1l">Late</label><input type="radio" class="btn-check" name="s1" id="s1a" ><label class="btn btn-sm opt-a" for="s1a">Absent</label></span></li><li class="mark-row"><span><span class="avatar">KK</span>Kiran Kumar</span><span class="btn-group" role="group" aria-label="Status for Kiran Kumar"><input type="radio" class="btn-check" name="s2" id="s2p" checked><label class="btn btn-sm opt-p" for="s2p">Present</label><input type="radio" class="btn-check" name="s2" id="s2l" ><label class="btn btn-sm opt-l" for="s2l">Late</label><input type="radio" class="btn-check" name="s2" id="s2a" ><label class="btn btn-sm opt-a" for="s2a">Absent</label></span></li><li class="mark-row"><span><span class="avatar">MN</span>Meera Nair</span><span class="btn-group" role="group" aria-label="Status for Meera Nair"><input type="radio" class="btn-check" name="s3" id="s3p" checked><label class="btn btn-sm opt-p" for="s3p">Present</label><input type="radio" class="btn-check" name="s3" id="s3l" ><label class="btn btn-sm opt-l" for="s3l">Late</label><input type="radio" class="btn-check" name="s3" id="s3a" ><label class="btn btn-sm opt-a" for="s3a">Absent</label></span></li><li class="mark-row"><span><span class="avatar">RP</span>Rohan Patel</span><span class="btn-group" role="group" aria-label="Status for Rohan Patel"><input type="radio" class="btn-check" name="s4" id="s4p" checked><label class="btn btn-sm opt-p" for="s4p">Present</label><input type="radio" class="btn-check" name="s4" id="s4l" ><label class="btn btn-sm opt-l" for="s4l">Late</label><input type="radio" class="btn-check" name="s4" id="s4a" ><label class="btn btn-sm opt-a" for="s4a">Absent</label></span></li><li class="mark-row"><span><span class="avatar">SR</span>Sneha Rao</span><span class="btn-group" role="group" aria-label="Status for Sneha Rao"><input type="radio" class="btn-check" name="s5" id="s5p" checked><label class="btn btn-sm opt-p" for="s5p">Present</label><input type="radio" class="btn-check" name="s5" id="s5l" ><label class="btn btn-sm opt-l" for="s5l">Late</label><input type="radio" class="btn-check" name="s5" id="s5a" ><label class="btn btn-sm opt-a" for="s5a">Absent</label></span></li></ul>
+<div class="d-flex flex-wrap gap-2 justify-content-between">
+<button class="btn btn-outline-ink" type="reset">Reset all to present</button>
+<button class="btn btn-ink" type="submit">Save attendance</button>
+</div>
+</form>
+</main>
+<footer class="site-footer">
+<div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+<span>Rollcall attendance tracker. Static demo built with HTML, CSS and Bootstrap.</span>
+<span><a href="index.html">Dashboard</a> &nbsp; <a href="students.html">Students</a> &nbsp; <a href="attendance.html">Mark attendance</a> &nbsp; <a href="reports.html">Reports</a> &nbsp; <a href="login.html">Log in</a> &nbsp; <a href="signup.html">Create account</a></span>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
